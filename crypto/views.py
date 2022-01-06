@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_protect
 
+
+@csrf_protect
 def home(request):
     import requests
     import json
@@ -13,6 +16,9 @@ def home(request):
         d['body']=d['body'][0:100]+"..."
     return render(request,"home.html",{"api":api,"price":price})
 
+
+
+@csrf_protect
 def prices(request):
     if request.method == "POST":
         import requests
@@ -21,7 +27,6 @@ def prices(request):
         quote=quote.upper()
         crypto_request = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms="+quote+"&tsyms=USD")
         crypto=json.loads(crypto_request.content) 
-        print(crypto)
         return render(request,"prices.html",{"quote":quote,"crypto":crypto})
     else:
         notfound="Enter a crypto currency symbol into the above form  ..."
