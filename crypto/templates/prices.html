@@ -2,25 +2,154 @@
 
 {% block content %}
 
-{% if notfound %}
-<h3 class="">{{notfound}}</h3>
-{% else %}
-{% if crypto.Response %}
- <div class="alert alert-danger">
-    <h3>Opps !, {{quote}} does not exits please try Again ...</h3>
-</div>
-{% endif %}
-{% for key,value in crypto.DISPLAY.items %}
 
-<div class="jumbotron shadow-sm  mb-5 bg-body rounded">
-    <h1 class="display-4 font-weight-bold">{{key}} </h1>
-     <hr style="height:2px;background-color:black">
-    <strong>Name:</strong>{{key}} <br>
-    <strong>Price:</strong> {{value.USD.PRICE}} <br>
-    <strong>Day High:</strong> {{value.USD.HIGHDAY}} <br>
-    <strong>Day Low:</strong> {{value.USD.LOWDAY}} <br>
-    <strong>Market Cap:</strong> {{value.USD.MKTCAP}} <br>
-</div>
-{% endfor %}
+{% if notfound %}
+  <h3 class="">{{notfound}}</h3>
+{% else %}
+   {% if crypto.Response %}
+     <div class="alert alert-danger">
+       <h3>Opps !, {{quote}} does not exits please try Again ...</h3>
+     </div>
+   {% endif %}
+   {% for key,value in crypto.DISPLAY.items %}
+    <div class="jumbotron shadow-sm  mb-5 bg-body rounded">
+        <h1 class="display-4 font-weight-bold">{{key}} </h1>
+        <hr style="height:2px;background-color:black">
+        <table class="table table-bordered  table-hover font-s">
+          <tbody>
+             <tr>
+                 <td><strong>Name:</strong></td>
+                 <td>{{key}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Price:</strong></td>
+                 <td>{{value.USD.PRICE}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Day High:</strong></td>
+                 <td>{{value.USD.HIGHDAY}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Day Low:</strong></td>
+                 <td>{{value.USD.LOWDAY}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Market Cap:</strong></td>
+                 <td>{{value.USD.MKTCAP}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Last Update:</strong></td>
+                 <td>{{value.USD.LASTUPDATE}} </td>
+             </tr>
+             <tr>
+                 <td><strong>Last Volume:</strong> </td>
+                 <td>{{value.USD.LASTVOLUME}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Last Volume To:</strong> </td>
+                 <td>{{value.USD.LASTVOLUMETO}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Last Trad Id:</strong></td>
+                 <td>{{value.USD.LASTTRADEID}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Volume Day:</strong></td>
+                 <td>{{value.USD.VOLUMEDAY}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Volume Day To:</strong></td>
+                 <td>{{value.USD.VOLUMEDAYTO}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Volume 24 Hour:</strong></td>
+                 <td>{{value.USD.VOLUME24HOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Volume 24 Hour To:</strong></td>
+                 <td>{{value.USD.VOLUME24HOURTO}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Open Day:</strong> </td>
+                 <td>{{value.USD.OPENDAY}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Open 24 Hour:</strong> </td>
+                 <td>{{value.USD.OPEN24HOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>High 24 Hour:</strong></td>
+                 <td>{{value.USD.HIGH24HOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Low 24 Hour:</strong></td>
+                 <td>{{value.USD.LOW24HOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Last Market:</strong> </td>
+                 <td>{{value.USD.LASTMARKET}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Volume Hour:</strong></td>
+                 <td>{{value.USD.VOLUMEHOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Volume Hour To:</strong></td>
+                 <td>{{value.USD.VOLUMEHOURTO}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Open Hour:</strong></td>
+                 <td>{{value.USD.OPENHOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>High Hour:</strong></td>
+                 <td>{{value.USD.HIGHHOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Low Hour:</strong></td>
+                 <td>{{value.USD.LOWHOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Top Tier Volume 24 Hour:</strong></td>
+                 <td>{{value.USD.TOPTIERVOLUME24HOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Top Tier Volume 24 Hour To:</strong> </td>
+                 <td>{{value.USD.TOPTIERVOLUME24HOURTO}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Change 24 Hour:</strong></td>
+                 <td>{{value.USD.CHANGE24HOUR}} </td>
+             </tr>
+             <tr>
+                 <td><strong>Change PCT 24 Hour:</strong></td>
+                 <td>{{value.USD.CHANGEPCT24HOUR}} </td>
+             </tr>
+             <tr>
+                 <td><strong>Change Day:</strong></td>
+                 <td>{{value.USD.CHANGEDAY}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Change PCT Day:</strong></td>
+                 <td>{{value.USD.CHANGEPCTDAY}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Change Hour:</strong></td>
+                 <td>{{value.USD.CHANGEHOUR}} </td>
+             </tr>
+             <tr>
+                 <td> <strong>Change PCT Hour:</strong> </td>
+                 <td>{{value.USD.CHANGEPCTHOUR}}</td>
+             </tr>
+             <tr>
+                 <td><strong>Conversion Type:</strong> </td>
+                 <td>{{value.USD.CONVERSIONTYPE}}</td>
+             </tr>
+          </tbody>
+        </table>
+   </div>
+    {% endfor %}
 {% endif %}
+
+
 {% endblock %}

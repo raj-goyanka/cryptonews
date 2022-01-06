@@ -9,25 +9,25 @@
 
 
 
-<table class="table table-bordered table-striped table-hover">
+<table class="table table-bordered table-striped table-hover font-s">
   <thead>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">24h High</th>
       <th scope="col">24h Low</th>
-      <th scope="col">Market Cap</th>
+      <!-- <th scope="col">Market Cap</th> -->
     </tr>
   </thead>
   <tbody>
     {% for key,value in price.DISPLAY.items %}
-    <tr>
-      <td>{{key}}</td>
-      <td>{{value.USD.PRICE}}</td>
-      <td>{{value.USD.HIGHDAY}}</td>
-      <td>{{value.USD.LOWDAY}}</td>
-      <td>{{value.USD.MKTCAP}}</td>
-    </tr>
+     <tr>
+       <td>{{key}}</td>
+       <td>{{value.USD.PRICE}}</td>
+       <td>{{value.USD.HIGHDAY}}</td>
+       <td>{{value.USD.LOWDAY}}</td>
+       <!-- <td>{{value.USD.MKTCAP}}</td> -->
+     </tr>
     {% endfor %}
   </tbody>
 </table>
@@ -37,44 +37,23 @@
 <br>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <div class="container">
   <div class="row">
     {% for data in api.Data %}
-    <div class="col-sm">
-      <div class="card" style="width: 18rem;">
-        <img src="{{data.imageurl}}" class="card-img-top" alt="{{data.source}}">
-        <div class="card-body">
-          <h5 class="card-title">{{data.title}}</h5>
-          <p class="card-text">{{data.body}}</p>
-          <a href="{{data.url}}" class="btn btn-info">Read More</a>
-        </div>
-      </div>
-      <br>
-    </div>
+      <div class="col-sm">
+         <div class="card" style="width: 18rem;">
+           <img src="{{data.imageurl}}" class="card-img-top" alt="{{data.source}}">
+           <div class="card-body">
+             <h5 class="card-title">{{data.title}}</h5>
+             <p class="card-text">{{data.body}}</p>
+             <a href="{{data.url}}" class="btn btn-info">Read More</a>
+           </div>
+         </div>
+         <br>
+       </div>
     {% endfor %}
   </div>
-
 </div>
-
-
-
-
-
-
-
-
-
 
 
 
