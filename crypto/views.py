@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.views.decorators.csrf import csrf_protect
+# from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_exempt
 
 
-@csrf_protect
+# @csrf_protect
+@csrf_exempt
 def home(request):
     import requests
     import json
@@ -18,7 +20,8 @@ def home(request):
 
 
 
-@csrf_protect
+# @csrf_protect
+@csrf_exempt
 def prices(request):
     if request.method == "POST":
         import requests
