@@ -21,8 +21,9 @@ DEBUG = False
 ALLOWED_HOSTS = ["newsoncrypto.herokuapp.com","localhost"]
 # ALLOWED_HOSTS = []
 
-
+CSRF_TRUSTED_ORIGINS = ['https://newsoncrypto.herokuapp.com/prices/']
 # Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
