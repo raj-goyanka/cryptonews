@@ -12,11 +12,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
-# SECRET_KEY = 'django-insecure--x1n@wtu+h__o0&l$ma5&y_gaj7)c17z@ul7eqsvpc46(pg@e!'
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["newsoncrypto.herokuapp.com","localhost"]
 # ALLOWED_HOSTS = []
