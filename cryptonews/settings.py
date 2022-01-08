@@ -21,13 +21,7 @@ DEBUG = False
 ALLOWED_HOSTS = ["newsoncrypto.herokuapp.com","localhost"]
 # ALLOWED_HOSTS = []
 
-CORS_ALLOW_CREDENTIALS = True
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ALLOW_CREDENTIALS = True
-CORS_REPLACE_HTTPS_REFERER = True
-CSRF_TRUSTED_ORIGINS = ['newsoncrypto.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://newsoncrypto.herokuapp.com']
 # Application definition
 
 
