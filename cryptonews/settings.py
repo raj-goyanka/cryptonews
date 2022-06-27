@@ -18,7 +18,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ["localhost","cryptonetwork-rajgoyanka.herokuapp.com"]
 
 CSRF_TRUSTED_ORIGINS = ['https://newsoncrypto.herokuapp.com']
 
