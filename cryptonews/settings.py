@@ -16,12 +16,12 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ["newsoncrypto.herokuapp.com","localhost"]
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost"]
 
 CSRF_TRUSTED_ORIGINS = ['https://newsoncrypto.herokuapp.com']
+
 # Application definition
 
 

@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT cryptonews.wsgi:application
+web: gunicorn cryptonews.wsgi --log-file -
