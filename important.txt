@@ -1,0 +1,3 @@
+1) Virtual Env name --> env
+2) SECRET KEY ->
+ mg3tck&541d(ml6%gwom5q@ep0agjfygso+$8c-_4+fw*im6*t
